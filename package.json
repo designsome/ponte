@@ -11,7 +11,9 @@
     "ci": "mocha --recursive --bail --watch test",
     "jshint-lib": "jshint lib",
     "jshint-test": "jshint test",
-    "start": "./bin/ponte -v | bunyan"
+    "start": "./bin/ponte -v | bunyan",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "pre-commit": [
     "jshint-lib",
@@ -48,6 +50,8 @@
     "xtend": "~4.0.1",
     "coap": "~0.13.0",
     "st": "~1.1.0",
-    "corsify": "~2.1.0"
-  }
+    "corsify": "~2.1.0",
+    "snyk": "^1.83.0"
+  },
+  "snyk": true
 }
